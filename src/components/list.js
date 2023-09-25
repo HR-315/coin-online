@@ -7,10 +7,11 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { Button, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
-    backgroundColor: theme.palette.secondary.dark,
+    backgroundColor: "#6200ea",
     color: theme.palette.common.white,
     fontSize : "large",
   },
@@ -34,7 +35,9 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 
 export default function CoinsList({coins}) {
   console.log(coins);
-
+const clickHandler=(id)=>{
+  console.log(id)
+}
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
@@ -49,7 +52,7 @@ export default function CoinsList({coins}) {
           </TableRow>
         </TableHead>
         <TableBody>
-          {coins.map((row) => (
+          {coins.map((row ,index) => (
             <StyledTableRow key={row.name}>
               <StyledTableCell component="th" scope="row">
                 {row.name}
@@ -58,7 +61,10 @@ export default function CoinsList({coins}) {
               <StyledTableCell align="center">{row.delta.day}</StyledTableCell>
               <StyledTableCell align="center">{row.rank}</StyledTableCell>
               <StyledTableCell align="center">{row.rate}</StyledTableCell>
-              <StyledTableCell align="center"><Button color='secondary'  variant="contained">more info</Button></StyledTableCell>
+<StyledTableCell align="center">
+    <Button onClick={() =>clickHandler(index)} color='secondary' variant="contained"><Link to={`${index}`}>more info</Link></Button>
+</StyledTableCell>
+
             </StyledTableRow>
           ))}
         </TableBody>
