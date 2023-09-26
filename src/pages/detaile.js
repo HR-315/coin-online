@@ -33,16 +33,18 @@ const get_coin_info = coins.filter((el , index) => {
     justifyContent="center"
 >
   <Grid item xs={12}>
-    <Item>
-        <p>{get_coin_info[0].code}</p>
+    <ListItem>
         <img 
         src={`${get_coin_info[0].png64}?w=164&h=164&fit=crop&auto=format`}
         alt={get_coin_info[0].name}
         loading="lazy"
-      /></Item>
+      />
+      <h1 style={{marginLeft:"300px"}}> {get_coin_info[0].code} </h1>
+      
+      </ListItem>
   </Grid>
   <Grid item xs={4}>
-    <Item>sds</Item>
+    <ListItem>sds</ListItem>
   </Grid>
 
 </Grid>
