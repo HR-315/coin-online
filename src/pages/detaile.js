@@ -1,55 +1,97 @@
 import React from 'react';
-import { useParams } from "react-router-dom";
+import {useParams} from "react-router-dom";
 import getData from '../api';
-import { Box, ListItem, Paper } from '@mui/material';
-import { styled } from '@mui/material/styles';
-import Grid from '@mui/material/Grid';
 import '../styles/detailePage.css';
-const coins = await getData();
-const Item = styled(Paper)(({ theme }) => ({
+import {FormLabel, Grid} from '@mui/material';
+import {styled} from '@mui/material/styles';
+import Paper from '@mui/material/Paper';
+
+const Item = styled(Paper)(({theme}) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
+    ...theme.typography.body2,
+    padding: theme.spacing(1),
+    textAlign: 'center',
+    color: theme.palette.text.secondary
 }));
 
+
+const coins = await getData();
 export default function BasicGrid() {
-    
-const productId = useParams();
-const get_coin_info = coins.filter((el , index) => {
-    return index.toString()  === productId.id;
-});
 
-  return (
+    const productId = useParams();
+    const get_coin_info = coins.filter((el, index) => {
+        return index.toString() === productId.id;
+    });
+    return (
 
+        <div class="container">
+            <div class="brand-logo">
 
-    <div class="card">
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="card-inner">
-    <Grid container   
-    justifyContent="center"
->
-  <Grid item xs={12}>
-    <ListItem>
-        <img 
-        src={`${get_coin_info[0].png64}?w=164&h=164&fit=crop&auto=format`}
-        alt={get_coin_info[0].name}
-        loading="lazy"
-      />
-      <h1 style={{marginLeft:"300px"}}> {get_coin_info[0].code} </h1>
-      
-      </ListItem>
-  </Grid>
-  <Grid item xs={4}>
-    <ListItem>sds</ListItem>
-  </Grid>
+                <img className="logo-image"
+                    src={
+                        `${
+                            get_coin_info[0].png64
+                        }`
+                    }
+                    alt={
+                        get_coin_info[0].title
+                    }
+                    loading="lazy"/>
+            </div>
+            <div class="brand-title">
+                {
+                get_coin_info[0].name
+            }</div>
+            <div>
+                <Grid container spacing={4}   justifyContent="space-around" >
+                    <Grid  xs={3}>
+                      <label >Cap</label>
+                        <Item  class="item inputs">
+                            {
+                           <p class="item_content">{get_coin_info[0].name}</p>  
+                        }</Item>
+                    </Grid>
+                    <Grid  xs={3}>
+                      <label >Cap</label>
+                        <Item  class="item inputs">
+                            {
+                           <p class="item_content">{get_coin_info[0].name}</p>  
+                        }</Item>
+                    </Grid>
+                    <Grid  xs={3}>
+                      <label >Cap</label>
+                        <Item  class="item inputs">
+                            {
+                           <p class="item_content">{get_coin_info[0].name}</p>  
+                        }</Item>
+                    </Grid>
+                    </Grid>
+                    <Grid container spacing={4}   justifyContent="space-around" >
+                    <Grid  xs={3}>
+                      <label >Cap</label>
+                        <Item  class="item inputs">
+                            {
+                           <p class="item_content">{get_coin_info[0].name}</p>  
+                        }</Item>
+                    </Grid>
+                    <Grid  xs={3}>
+                      <label >Cap</label>
+                        <Item  class="item inputs">
+                            {
+                           <p class="item_content">{get_coin_info[0].name}</p>  
+                        }</Item>
+                    </Grid>
+                    <Grid  xs={3}>
+                      <label >Cap</label>
+                        <Item  class="item inputs">
+                            {
+                           <p class="item_content">{get_coin_info[0].name}</p>  
+                        }</Item>
+                    </Grid>
+                    
+                    </Grid>
 
-</Grid>
-
-    </div>
-</div>
-  );
+ </div>
+        </div>
+    )
 }

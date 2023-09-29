@@ -1,60 +1,87 @@
-.card {
-    width: 900px;
-    height: 600px;
-    transition: all 0.2s;
-    position: relative;
-    cursor: pointer;
-    margin-left: 300px;
-    margin-top: 50px;
-  }
-  
-  .card-inner {
-    width: inherit;
-    height: inherit;
-    background: rgba(57, 55, 55, 0.5);
-    box-shadow: 0 0 10px rgba(0,0,0,0.7);
-    backdrop-filter: blur(10px);
-    border-radius: 8px;
-  }
-  
- 
-  
-  .circle {
-    width: 100px;
-    height: 100px;
-    background: radial-gradient(#3d034f, #02013e);
-    border-radius: 50%;
-    position: absolute;
-    animation: move-up6 3s ease-in infinite alternate-reverse;
-  }
-  
-  .circle:nth-child(1) {
-    top: -25px;
-    left: -25px;
-  }
-  
-  .circle:nth-child(2) {
-    bottom: -25px;
-    right: -25px;
-    animation-name: move-down1;
-  }
-  
-  .circle:nth-child(3) {
-    bottom: 190px;
-    right: 200px;
-    width: 200px;
-    height: 200px;
-    animation-name: move-down1;
-  }
-  
-  @keyframes move-up6 {
-    to {
-      transform: translateY(-10px);
-    }
-  }
-  
-  @keyframes move-down1 {
-    to {
-      transform: translateY(10px);
-    }
-  }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
+
+
+
+.container {  
+  margin: 50px 260px ;
+  position: relative;
+  width: 1000px;
+  height: 600px;
+  border-radius: 20px;
+  padding: 40px;
+  box-sizing: border-box;
+  background: #ecf0f3;
+  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+}
+
+.brand-logo {
+  height: 150px;
+  width: 150px;
+  margin: auto;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #e0e0e0, #bcbcbc);
+  box-shadow:  22px 22px 25px #a5a5a5,
+               -22px -22px 25px #fdfdfd;
+}
+
+.brand-title {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 50px;
+  font-weight: 900;
+  font-size: 2.8rem;
+  color: #075687;
+  letter-spacing: 1px;
+}
+
+.inputs {
+  text-align: left;
+  margin-top: 30px;
+}
+
+.logo-image{
+  margin: 26px  26px;
+  size: 200px;
+  height: 100px;
+  width:100px;
+}
+
+label {
+  margin-top: 20px;
+  margin-left: 10px;
+
+}
+
+.item {
+  color: gray;
+}
+
+.item {
+  background: #ecf0f3;
+  border-radius: 50px;
+  box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+.item_content{
+  padding: 10px;
+  font-size: 20px ;
+  margin-left: 10;
+  margin-top: 10px;
+}
+
+
+a{
+  text-decoration: none;
+  color: #ecf0f3;
+}
+
+
+
+
+h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
