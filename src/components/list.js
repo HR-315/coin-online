@@ -65,7 +65,7 @@ const clickHandler=(id)=>{
               <StyledTableCell align="center">{row.rank}</StyledTableCell>
               <StyledTableCell align="center">{row.rate}</StyledTableCell>
 <StyledTableCell align="center">
-    <Button onClick={() =>clickHandler(index)} color='secondary' variant="contained"><Link to={`${index}`}>more info</Link></Button>
+    <Button  onClick={() =>clickHandler(index)} color='secondary' variant="contained"><Link to={`${index}`}>more info</Link></Button>
 </StyledTableCell>
 
             </StyledTableRow>

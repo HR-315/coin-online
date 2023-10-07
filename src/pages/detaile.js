@@ -43,55 +43,89 @@ export default function BasicGrid() {
                 get_coin_info[0].name
             }</div>
             <div>
-                <Grid container spacing={4}   justifyContent="space-around" >
-                    <Grid  xs={3}>
-                      <label >Cap</label>
-                        <Item  class="item inputs">
-                            {
-                           <p class="item_content">{get_coin_info[0].name}</p>  
-                        }</Item>
-                    </Grid>
-                    <Grid  xs={3}>
-                      <label >Cap</label>
-                        <Item  class="item inputs">
-                            {
-                           <p class="item_content">{get_coin_info[0].name}</p>  
-                        }</Item>
-                    </Grid>
-                    <Grid  xs={3}>
-                      <label >Cap</label>
-                        <Item  class="item inputs">
-                            {
-                           <p class="item_content">{get_coin_info[0].name}</p>  
-                        }</Item>
-                    </Grid>
-                    </Grid>
+
                     <Grid container spacing={4}   justifyContent="space-around" >
                     <Grid  xs={3}>
-                      <label >Cap</label>
+                      <label class="label">Code</label>
                         <Item  class="item inputs">
                             {
-                           <p class="item_content">{get_coin_info[0].name}</p>  
+                           <p class="item_content">{get_coin_info[0].code}</p>  
                         }</Item>
                     </Grid>
                     <Grid  xs={3}>
-                      <label >Cap</label>
+                      <label class="label">Rank</label>
                         <Item  class="item inputs">
                             {
-                           <p class="item_content">{get_coin_info[0].name}</p>  
+                           <p class="item_content">{get_coin_info[0].rank}</p>  
                         }</Item>
                     </Grid>
                     <Grid  xs={3}>
-                      <label >Cap</label>
+                      <label class="label">Age</label>
                         <Item  class="item inputs">
                             {
-                           <p class="item_content">{get_coin_info[0].name}</p>  
+                           <p class="item_content">{get_coin_info[0].age}</p>  
                         }</Item>
                     </Grid>
-                    
                     </Grid>
+ </div>
+            <div>
 
+                    <Grid container spacing={4}   justifyContent="space-around" >
+                    <Grid  xs={3}>
+                      <label class="label">Rate</label>
+                        <Item  class="item inputs">
+                            {
+                           <p class="item_content">{get_coin_info[0].rate}</p>  
+                        }</Item>
+                    </Grid>
+                    <Grid  xs={3}>
+                      <label class="label">Pairs</label>
+                        <Item  class="item inputs">
+                            {
+                           <p class="item_content">{get_coin_info[0].pairs}</p>  
+                        }</Item>
+                    </Grid>
+                    <Grid  xs={3}>
+                      <label class="label">MaxSupply</label>
+                        <Item  class="item inputs">
+                            {
+                           <p class="item_content">{get_coin_info[0].maxSupply?get_coin_info[0].maxSupply:"-------------------"}</p>  
+                        }</Item>
+                    </Grid>
+                    </Grid>
+ </div>
+            <div>
 
+                    <Grid container spacing={1}   justifyContent="space-around" >
+                    <Grid  xs={3}>
+                      <label class="label">Year</label>
+                        <Item  class="item-4 inputs">
+                            {
+                           <p class="item_content">{get_coin_info[0].delta.year}</p>  
+                        }</Item>
+                    </Grid>
+                    <Grid  xs={3}>
+                      <label class="label">Month</label>
+                        <Item  class="item-4 inputs">
+                            {
+                           <p class="item_content">{get_coin_info[0].delta.month}</p>  
+                        }</Item>
+                    </Grid>
+                    <Grid  xs={3}>
+                      <label class="label">Week</label>
+                        <Item  class="item-4 inputs">
+                            {
+                           <p class="item_content">{get_coin_info[0].delta.week}</p>  
+                        }</Item>
+                    </Grid>
+                    <Grid  xs={3}>
+                      <label class="label">Day</label>
+                        <Item  class="item-4 inputs">
+                            {
+                           <p class="item_content">{get_coin_info[0].delta.year}</p>  
+                        }</Item>
+                    </Grid>
+                    </Grid>
  </div>
         </div>
     )

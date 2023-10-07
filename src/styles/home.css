@@ -1,0 +1,21 @@
+.footer-wrraper{
+width: 100%;
+min-height: 300px;
+max-height: 500px;
+border: solid 3px #000;
+background-color: #fff;
+}   
+.main-wrraper{
+width: 100%;
+min-height: 500px;
+max-height: 500px;
+border: solid 3px #000;
+background-color: #fff;
+}   
+.header-wrraper{
+width: 100%;
+min-height: 200px;
+max-height: 500px;
+border: solid 3px #000;
+background-color: #7e92e4;
+}   
